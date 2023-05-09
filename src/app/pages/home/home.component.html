@@ -1,0 +1,14 @@
+<!-- espacio de busqueda para que los usuarios puedan filtrar sus busquedas-->
+<h1>Cartelera</h1>
+
+<div class="row" *ngIf="movies.length > 0">
+    <div class="col">
+        
+        <app-slide-show [movies]="moviesSlideShow"></app-slide-show>
+
+    </div>
+</div>
+
+<!--Muestra en pantalla de estrenos de pelis-->
+<h1 class="mt-5">Peliculas En Estreno</h1>
+<app-peliculas-poster-grid *ngIf="movies.length > 0" [movies]="movies"></app-peliculas-poster-grid>
